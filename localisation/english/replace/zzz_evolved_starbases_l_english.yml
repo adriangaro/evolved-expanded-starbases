@@ -1,0 +1,30 @@
+﻿l_english:
+
+sm_tec_starbase_m_interceptor:0 "Interception Battery"
+sm_tec_starbase_m_interceptor_desc:0 "Advanced tracking systems added into the starbase will provide a better survival over hostile attacks.\n\nAdds five point defense slots to the Starbase.\n"
+
+sm_tec_starbase_m_xxl_cannons:0 "Advanced Mounted Cannons"
+sm_tec_starbase_m_xxl_cannons_desc:0 "Improved structures allowing a higher power output for the starbase.\n\nAdds three large-size weapon slots to the Starbase.\n"
+
+sm_tec_starbase_m_xxl_hangars:0 "Advanced Hangar Bays"
+sm_tec_starbase_m_xxl_hangars_desc:0 "A series of automatized hangars launching a defensive fleet of small interceptors for ensuring the starbase operatively.\n\nAdds four hangars for strike craft and one point defense slot to the Starbase.\n"
+
+sm_tec_starbase_m_xxl_missiles:0 "Advanced Missile Rack"
+sm_tec_starbase_m_xxl_missiles_desc:0 "Long-range missile launchers paired with nominal starbase firepower, ensuring a higher damage overall.\n\nAdds five missile weapon slots to the Starbase.\n"
+
+sm_tec_starbase_m_xxl_hypergun:0 "Annihilation Battery"
+sm_tec_starbase_m_xxl_hypergun_desc:0 "Peak performance structural layout for fitting extremely powerful weapons.\n\nAdds two spinal weapon slots to the Starbase.\n"
+
+sm_hangar_bay:0 "Hangar Bay"
+sm_hangar_bay_desc:0 "Adds two hangars for strike craft and one point defense slot to the Starbase.\n"
+
+sm_gun_battery:0 "Gun Battery"
+sm_gun_battery_desc:0 "Adds three medium-size weapon slots to the Starbase.\n"
+
+sm_missile_battery:0 "Missile Battery"
+sm_missile_battery_desc:1 "Adds three missile weapon slots to the Starbase.\n"
+
+
+tr_discovery_databank_uplinks:0 "$tech_databank_uplinks$"
+tr_discovery_databank_uplinks_desc:3 "§HUnlocks Edict:§! $edict_research_subsidies$\n§Y$mod_station_researchers_produces_mult$§! increased by §G50%§!.\n§Y$starbase_constructions_research_produces$§! increased by §G20%§!."
+tr_discovery_databank_uplinks_delayed:0 "$tech_databank_uplinks_desc$"

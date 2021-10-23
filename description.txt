@@ -1,0 +1,23 @@
+[h1]Changes and Additions[/h1]
+[list]
+[*] Compatibility between Stellaris Evolved and Expanded Starbases.
+[*] Starbase trade buildings are available to trade gestalts.
+[*] Stellaris Evolved defensive starbase modules are buffed to match the power level of Expanded Starbases(usually one or two more weapon slots).
+[*] Increased maximum starbase building slots to accomodate both increase from Expanded Starbases Bastions and Stellaris Evolved civics and traditions which give more starbase building slots.
+[*] Enabled the Stellaris Evolved XXL weapon defensive starbase module (starbase unique), requires Eternal Vigilance ascension perk.
+[*] Fallen empires will use the Stellaris Evolved modules on their starbases, making them quite powerful.
+[/list]
+
+[h1]Motivation[/h1]
+Stellaris Evolved has some internal support for Expanded Starbases, however there are some overrides which make some things not work (like bastions and the defensive modules being broken and trade gestalts and trade buildings).
+
+[h1]Mod Load Order[/h1]
+[list]
+[*] Stellaris Evolved - Alpha
+[*] Expanded Starbases
+[*] Stellaris Evolved + Expanded Starbases
+[*] UI Overhaul (probably is required)
+[/list]
+
+[h1]Small Warning[h1]
+As Expanded Starbases makes starbases and the defensive modules more powerful, this change is applied to those from Stellaris Evolved, making them quite the threat.
