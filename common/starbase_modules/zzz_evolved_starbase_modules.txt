@@ -97,8 +97,10 @@ anchorage = {
 			energy = 1
 		}
 	}
-
-	country_modifier = {
+	triggered_country_modifier = {
+		potential = {
+			NOT = { has_starbase_building = naval_logistics_office }
+		}
 		country_naval_cap_add = 4
 	}
 	triggered_country_modifier = {
@@ -107,7 +109,7 @@ anchorage = {
 			exists = owner
 			owner = { NOT = { has_technology = tech_interstellar_fleet_doctrines } }
 		}
-		country_naval_cap_add = 2
+		country_naval_cap_add = 6
 	}
 	
 	triggered_country_modifier = {
@@ -116,14 +118,14 @@ anchorage = {
 			exists = owner
 			owner = { has_technology = tech_interstellar_fleet_doctrines }
 		}
-		country_naval_cap_add = 4
+		country_naval_cap_add = 8
 	}
 
 	triggered_station_modifier = {
 		potential = { 
 			exists = owner
 			owner = { 
-				has_valid_civic = civic_tec_navaltraders 
+				has_valid_civic = civic_tec_corporate_navaltraders 
 			} 
 		}
 		starbase_trade_protection_add = 5
@@ -135,10 +137,11 @@ anchorage = {
 			exists = owner
 			owner = { 
 				OR = {
-					has_valid_civic = civic_tec_navaltraders
+					has_valid_civic = civic_tec_corporate_navaltraders
 					has_valid_civic = civic_tec_machine_traders
 				}
 			}
+			has_starbase_building = offworld_trading_company
 		}
 		trade_value_add = 2
 	}

@@ -396,7 +396,7 @@ offworld_trading_company = {
 			and = {
 				owner = {
 					OR = {
-						has_valid_civic = civic_tec_navaltraders
+						has_valid_civic = civic_tec_corporate_navaltraders
 						has_valid_civic = civic_tec_machine_traders
 					}
 				}
