@@ -901,13 +901,19 @@ ion_cannon = {
 	}
 
 	possible_construction = {
-		has_starbase_size >= starbase_citadel
+		OR = {
+			has_starbase_size >= starbase_citadel
+			has_starbase_size >= orbital_ring_tier_3
+		}
 	}
 
 	resources = {
 		category = starbase_stations
 		cost = {
 			alloys = 2000
+		}
+		upkeep = {
+			energy = 8
 		}
 	}
 }

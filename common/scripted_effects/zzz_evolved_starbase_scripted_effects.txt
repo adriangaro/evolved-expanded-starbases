@@ -1,0 +1,83 @@
+#	Example:
+#
+#	example_effect = {
+#		add_energy = -100
+#	}
+#
+#
+#	In a script file:
+#
+#	effect = {
+#		example_effect = yes
+#	}
+#
+
+create_fe_home_citadel = {
+	create_starbase = {
+		size = "starbase_bastion"
+
+		module = "shipyard"
+		module = "shipyard"
+		module = "tec_starbase_m_xxl_hypergun"
+		module = "tec_starbase_m_xxl_hangars"
+		module = "tec_starbase_m_xxl_hangars"
+		module = "tec_starbase_m_xxl_hangars"
+		module = "tec_starbase_m_xxl_cannons"
+		module = "tec_starbase_m_xxl_cannons"
+		module = "tec_starbase_m_xxl_cannons"
+		module = "tec_starbase_m_xxl_missiles"
+		module = "tec_starbase_m_xxl_missiles"
+		module = "tec_starbase_m_xxl_missiles"		
+
+		building = "crew_quarters"
+		building = "command_center"
+		building = "target_uplink_computer"
+		building = "defense_grid"
+		building = "colossus_yards"
+		building = "titan_yards"
+		building = "fleet_academy"
+		building = "starbase_fortifications"
+		
+		effect = {
+			while = {
+				count = 20
+				create_fallen_empire_platform = yes
+			}	
+		}
+	}
+}
+
+create_fe_citadel = {
+	create_starbase = {
+		size = "starbase_bastion"
+
+		module = "shipyard"
+		module = "anchorage"
+		module = "anchorage"
+		module = "anchorage"
+		module = "anchorage"
+		module = "tec_starbase_m_xxl_hypergun"
+		module = "tec_starbase_m_xxl_hangars"
+		module = "tec_starbase_m_xxl_hangars"
+		module = "tec_starbase_m_xxl_cannons"
+		module = "tec_starbase_m_xxl_cannons"
+		module = "tec_starbase_m_xxl_missiles"
+		module = "tec_starbase_m_xxl_missiles"
+
+		building = "crew_quarters"
+		building = "command_center"
+		building = "target_uplink_computer"
+		building = "defense_grid"
+		building = "listening_post"
+		building = "fleet_academy"
+		building = "naval_logistics_office"
+		building = "starbase_fortifications"
+		
+		effect = {
+			while = {
+				count = 10
+				create_fallen_empire_platform = yes
+			}	
+		}			
+	}
+}

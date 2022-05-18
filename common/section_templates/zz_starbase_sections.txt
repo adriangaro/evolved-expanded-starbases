@@ -10,6 +10,9 @@ ship_section_template = {
 	ship_size = starbase_starfortress
 	ship_size = starbase_citadel
 	ship_size = starbase_bastion
+	ship_size = orbital_ring_tier_1
+	ship_size = orbital_ring_tier_2
+	ship_size = orbital_ring_tier_3
 
 	fits_on_slot = "1"
 	fits_on_slot = "2"
@@ -64,7 +67,7 @@ ship_section_template = {
 		locatorname = "medium_gun_01"
 	}
 
-	aux_utility_slots = 1
+	aux_utility_slots = 2
 
 }
 
@@ -79,6 +82,9 @@ ship_section_template = {
 	ship_size = starbase_starfortress
 	ship_size = starbase_citadel
 	ship_size = starbase_bastion
+	ship_size = orbital_ring_tier_1
+	ship_size = orbital_ring_tier_2
+	ship_size = orbital_ring_tier_3
 
 	fits_on_slot = "1"
 	fits_on_slot = "2"
@@ -120,7 +126,7 @@ ship_section_template = {
 		locatorname = "medium_gun_03"
 	}
 
-	aux_utility_slots = 1
+	aux_utility_slots = 2
 }
 
 ship_section_template = {
@@ -134,6 +140,9 @@ ship_section_template = {
 	ship_size = starbase_starfortress
 	ship_size = starbase_citadel
 	ship_size = starbase_bastion
+	ship_size = orbital_ring_tier_1
+	ship_size = orbital_ring_tier_2
+	ship_size = orbital_ring_tier_3
 
 	fits_on_slot = "1"
 	fits_on_slot = "2"
@@ -187,7 +196,7 @@ ship_section_template = {
 		locatorname = "medium_gun_01"
 	}
 
-	aux_utility_slots = 1
+	aux_utility_slots = 2
 }
 
 ship_section_template = {
@@ -201,6 +210,9 @@ ship_section_template = {
 	ship_size = starbase_starfortress
 	ship_size = starbase_citadel
 	ship_size = starbase_bastion
+	ship_size = orbital_ring_tier_1
+	ship_size = orbital_ring_tier_2
+	ship_size = orbital_ring_tier_3
 		
 	fits_on_slot = "1"
 	fits_on_slot = "2"
@@ -258,7 +270,7 @@ ship_section_template = {
 		locatorname = "small_gun_01"
 	}
 
-	aux_utility_slots = 1
+	aux_utility_slots = 2
 }
 
 ship_section_template = {
@@ -272,6 +284,9 @@ ship_section_template = {
 	ship_size = starbase_starfortress
 	ship_size = starbase_citadel
 	ship_size = starbase_bastion
+	ship_size = orbital_ring_tier_1
+	ship_size = orbital_ring_tier_2
+	ship_size = orbital_ring_tier_3
 		
 	fits_on_slot = "1"
 	fits_on_slot = "2"
@@ -307,7 +322,7 @@ ship_section_template = {
 		locatorname = "xl_gun_01"
 	}
 
-	aux_utility_slots = 1
+	aux_utility_slots = 2
 }
 
 

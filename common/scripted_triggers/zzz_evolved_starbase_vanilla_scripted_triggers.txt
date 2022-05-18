@@ -1,0 +1,141 @@
+# <example_trigger> = {
+#     is_country_type = default
+#     num_communications > 0
+# }
+
+# As expressed in a script file:
+# trigger = {
+#     <example_trigger> = yes
+# }
+
+#Starbase scope
+has_nonshipyard_starbase_buildings = {
+    OR = {
+        has_starbase_building = art_college
+        has_starbase_building = black_hole_observatory
+        has_starbase_building = command_center
+        has_starbase_building = communications_jammer
+        has_starbase_building = crew_quarters
+        has_starbase_building = curator_think_tank
+        has_starbase_building = deep_space_black_site
+        has_starbase_building = disruption_field
+        has_starbase_building = fleet_academy
+        has_starbase_building = hydroponics_bay
+        has_starbase_building = ice_mining_station
+        has_starbase_building = listening_post
+        has_starbase_building = mercenary_garrison
+        has_starbase_building = naval_logistics_office
+        has_starbase_building = nebula_refinery
+        has_starbase_building = offworld_trading_company
+        has_starbase_building = resource_silo
+		has_starbase_building = salvager_workshop
+        has_starbase_building = target_uplink_computer
+        has_starbase_building = trader_proxy_office
+        has_starbase_building = warp_fluctuator
+        has_starbase_building = climate_control
+        has_starbase_building = space_production
+        has_starbase_building = trade_patrol
+        has_starbase_building = customs_office
+        has_starbase_building = customs_office_criminal
+        has_starbase_building = customs_office_gestalt
+        has_starbase_building = pulsar_hole_observatory
+        has_starbase_building = protostar_observatory
+        has_starbase_building = starbase_fortifications
+        has_starbase_building = dathnak_embassy
+        has_starbase_building = starbase_minefield
+		has_starbase_building = ring_alloys_hub
+		has_starbase_building = ring_bureaucracy_hub
+		has_starbase_building = ring_consumer_goods_hub
+		has_starbase_building = ring_energy_hub
+		has_starbase_building = ring_food_hub
+		has_starbase_building = ring_maintenance_hub
+		has_starbase_building = ring_minerals_hub
+		has_starbase_building = ring_synapse_hub
+		has_starbase_building = ring_trade_hub
+		has_starbase_building = tec_starbase_b_energygrid
+		has_starbase_building = tec_starbase_b_mininggrid
+		has_starbase_building = tec_starbase_b_research
+    }
+}
+
+needs_shipyard = { #country scope
+	years_passed > 10
+	nor = {
+		and = {
+			max_naval_capacity < 40
+			count_owned_starbase = {
+				count >= 1
+				limit = { has_starbase_module = shipyard }
+			}
+		}
+		and = {
+			max_naval_capacity < 150
+			count_owned_starbase = {
+				count >= 2
+				limit = { has_starbase_module = shipyard }
+			}
+		}
+		and = {
+			max_naval_capacity < 350
+			count_owned_starbase = {
+				count >= 3
+				limit = { has_starbase_module = shipyard }
+			}
+		}
+		and = {
+			max_naval_capacity < 700
+			count_owned_starbase = {
+				count >= 4
+				limit = { has_starbase_module = shipyard }
+			}
+		}
+		and = {
+			max_naval_capacity < 1000
+			count_owned_starbase = {
+				count >= 5
+				limit = { has_starbase_module = shipyard }
+			}
+		}
+		and = {
+			max_naval_capacity < 1500
+			count_owned_starbase = {
+				count >= 6
+				limit = { has_starbase_module = shipyard }
+			}
+		}
+		and = {
+			max_naval_capacity < 2000
+			count_owned_starbase = {
+				count >= 7
+				limit = { has_starbase_module = shipyard }
+			}
+		}
+		and = {
+			max_naval_capacity < 2500
+			count_owned_starbase = {
+				count >= 8
+				limit = { has_starbase_module = shipyard }
+			}
+		}
+		and = {
+			max_naval_capacity < 3000
+			count_owned_starbase = {
+				count >= 9
+				limit = { has_starbase_module = shipyard }
+			}
+		}
+		and = {
+			max_naval_capacity < 3500
+			count_owned_starbase = {
+				count >= 10
+				limit = { has_starbase_module = shipyard }
+			}
+		}
+		and = {
+			count_owned_starbase = {
+				count >= 12
+				limit = { has_starbase_module = shipyard }
+			}
+		}
+	}
+}

@@ -9,7 +9,7 @@ tech_gestalt_economics = {
 	
 	potential = {
 		is_gestalt = yes
-		tec_is_trade_gestalt = false
+		tec_is_trade_gestalt = no
 	}
 	
 	modifier = {
