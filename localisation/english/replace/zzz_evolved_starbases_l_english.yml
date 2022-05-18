@@ -28,3 +28,6 @@ sm_missile_battery_desc:1 "Adds three missile weapon slots to the Starbase.\n"
 tr_discovery_databank_uplinks:0 "$tech_databank_uplinks$"
 tr_discovery_databank_uplinks_desc:3 "§HUnlocks Edict:§! $edict_research_subsidies$\n§Y$mod_station_researchers_produces_mult$§! increased by §G50%§!.\n§Y$starbase_constructions_research_produces$§! increased by §G20%§!."
 tr_discovery_databank_uplinks_delayed:0 "$tech_databank_uplinks_desc$"
+
+ starbase_outpost_2:0 "Outpost Test"
+ starbase_outpost_2_plural:0 "Outposts Test"
