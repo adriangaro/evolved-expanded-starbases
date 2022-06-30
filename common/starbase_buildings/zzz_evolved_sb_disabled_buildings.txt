@@ -1,0 +1,21 @@
+orbital_institute = {
+	icon = "GFX_starbase_super_computer"
+	construction_days = 360
+	
+	potential = {
+		always = no
+	}
+
+	possible = {
+		
+		always = no
+	}
+	
+	custom_tooltip = orbital_institute_effects
+
+	ai_build_at_chokepoint = no
+	ai_build_outside_chokepoint = yes
+	ai_weight = {
+		weight = 150
+	}
+}

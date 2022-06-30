@@ -29,5 +29,9 @@ tr_discovery_databank_uplinks:0 "$tech_databank_uplinks$"
 tr_discovery_databank_uplinks_desc:3 "§HUnlocks Edict:§! $edict_research_subsidies$\n§Y$mod_station_researchers_produces_mult$§! increased by §G50%§!.\n§Y$starbase_constructions_research_produces$§! increased by §G20%§!."
 tr_discovery_databank_uplinks_delayed:0 "$tech_databank_uplinks_desc$"
 
- starbase_outpost_2:0 "Outpost Test"
- starbase_outpost_2_plural:0 "Outposts Test"
+
+orbital_institute_effects:0 "Starbase Research Modules produce §G+2§! of thier respective £physics£ £society£ £engineering£ §YResearch§!\n"
+curator_think_tank_effects:0 "Starbase Research Modules produce §G+1§! of thier respective £physics£ £society£ £engineering£ §YResearch§!\n"
+dathnak_embassy_effects:0 "§Y$sm_tec_starbase_m_society$§! Modules produce §G+2§! £society£ §YSociety Research§!\n"
+black_hole_observatory_effects:0 "§$sm_tec_starbase_m_physics$§! produce §G+2§! £physics£ §YPhysics Research§!\n"
+pulsar_hole_observatory_effects:0 "§$sm_tec_starbase_m_engineering$§! produce §G+2§! £engineering£ §YEngineering Research§!\n"

@@ -618,6 +618,11 @@ tec_starbase_m_xxl_hypergun = {
 				is_country_type = awakened_fallen_empire
 			}
 		}
+	
+		is_orbital_ring = no
+	}
+
+	possible = {
 		NOR = {
 			has_starbase_module = tec_starbase_m_xxl_hypergun
 			starbase_buildable_is_in_queue_before = {
@@ -625,8 +630,8 @@ tec_starbase_m_xxl_hypergun = {
 				second = tec_starbase_m_xxl_hypergun
 			}
 		}
-		is_orbital_ring = no
 	}
+	
 
 	resources = {
 		category = starbase_modules
@@ -830,6 +835,559 @@ trading_hub = {
 			solar_system = {
 				any_neighbor_system = {
 					has_system_trade_value > 50
+				}
+			}
+		}
+	}
+}
+
+
+tec_starbase_m_physics = {
+	icon = "GFX_tec_starbase_m_physics"
+	section = "REFINERY_STARBASE_SECTION"
+	construction_days = 180
+	initial = yes
+
+	potential = {
+		exists = owner
+		owner = {
+			has_technology = "tech_tec_starbase_physics"
+		}
+		is_orbital_ring = no
+	}
+
+	possible = {
+		hidden_trigger = {	# AI specializes production
+			exists = owner
+			OR = {
+				owner = {
+					is_ai = no
+				}
+				AND = {
+					owner = {	# Only ais
+						is_ai = yes
+					}
+					OR = {
+						solar_system = {	# Only on good systems
+							any_system_planet = {
+								OR = {
+									is_planet_class = pc_black_hole
+									is_planet_class = pc_pulsar
+								}
+							}
+						}
+						NOR = {	# Avoid the modules interfering with other starbase specs
+							has_starbase_module = anchorage
+							has_starbase_module = shipyard
+							has_starbase_module = gun_battery
+							has_starbase_module = tec_starbase_m_xxl_cannons
+							has_starbase_module = missile_battery
+							has_starbase_module = tec_starbase_m_xxl_missiles
+							has_starbase_module = hangar_bay
+							has_starbase_module = tec_starbase_m_xxl_hangars
+
+							has_starbase_module = tec_starbase_m_society
+							has_starbase_module = tec_starbase_m_engineering
+
+							has_starbase_module = tec_starbase_m_generator
+							has_starbase_module = tec_starbase_m_mining
+							has_starbase_module = tec_starbase_m_food
+						}
+					}
+				}
+			}
+		}
+	}
+
+	show_in_tech = "tech_tec_starbase_physics"
+
+	resources = {
+		category = station_researchers
+		cost = {
+			alloys = 100
+		}
+
+		upkeep = {
+			trigger = {
+				exists = owner
+				owner = {
+					tec_waives_starbase_module_upkeep = no
+				}
+			}
+			energy = 2
+		}
+
+		produces = {
+			physics_research = 4
+		}
+
+		produces = {
+			trigger = {
+				has_starbase_building = tec_starbase_b_research
+			}
+			physics_research = 2
+		}
+
+		produces = {
+			trigger = {
+				exists = owner
+				owner = {
+					is_galactic_community_member = yes
+				}
+				OR = {
+					is_active_resolution = "resolution_galacticstudies_astral_studies_network"
+					is_active_resolution = "resolution_galacticstudies_advanced_xenostudies"
+					is_active_resolution = "resolution_galacticstudies_ethical_guideline_refactoring"
+					is_active_resolution = "resolution_galacticstudies_extradimensional_experimentation"
+				}
+			}
+			physics_research = 2
+		}
+
+		produces = {
+			trigger = {
+				has_starbase_building = curator_think_tank
+			}
+			physics_research = 1
+		}
+
+		produces = {
+			trigger = {
+				solar_system = {
+					any_system_planet = {
+						OR = {
+							is_planet_class = pc_black_hole
+							is_planet_class = pc_pulsar
+						}
+					}
+				}
+			}
+			physics_research = 2
+		}
+
+		produces = {
+			trigger = {
+				exists = owner
+				owner = {
+					has_ascension_perk = ap_grasp_the_void
+				}
+			}
+			physics_research = 2
+		}
+
+		produces = {
+			trigger = {
+				exists = owner
+				owner = {
+					tec_increases_starbase_module_production = yes
+				}
+			}
+			physics_research = 2
+		}
+
+		produces = {
+			trigger = {
+				has_starbase_building = black_hole_observatory
+			}
+			physics_research = 2
+		}
+
+		produces = {
+			trigger = {
+				has_starbase_building = protostar_observatory
+			}
+			physics_research = 2
+		}
+	}
+
+	triggered_station_modifier = {
+		potential = {
+			exists = owner
+			owner = {
+				NOT = {
+					has_ascension_perk = ap_grasp_the_void
+				}
+			}
+		}
+		ship_hull_mult = -0.1
+	}
+
+	triggered_station_modifier = {
+		potential = {
+			exists = owner
+			owner = {
+				has_ascension_perk = ap_grasp_the_void
+			}
+		}
+		ship_hull_mult = 0.1
+		ship_armor_mult = 0.10
+	}
+
+	ai_build_at_chokepoint = no
+	ai_weight = {	# no... useful for ais
+		weight = 100
+	}
+}
+
+tec_starbase_m_society = {
+	icon = "GFX_tec_starbase_m_society"
+	section = "REFINERY_STARBASE_SECTION"
+	construction_days = 180
+	initial = yes
+
+	potential = {
+		exists = owner
+		owner = {
+			has_technology = "tech_tec_starbase_society"
+		}
+		is_orbital_ring = no
+	}
+
+	possible = {
+		hidden_trigger = {	# AI specializes production
+			exists = owner
+			OR = {
+				owner = {
+					is_ai = no
+				}
+				AND = {
+					owner = {	# Only ais
+						is_ai = yes
+					}
+					OR = {
+						solar_system = {	# Only on good systems
+							any_system_planet = {
+								exists = owner
+								owner = {
+									is_primitive = yes
+								}
+							}
+						}
+						NOR = {	# Avoid the modules interfering with other starbase specs
+							has_starbase_module = anchorage
+							has_starbase_module = shipyard
+							has_starbase_module = gun_battery
+							has_starbase_module = tec_starbase_m_xxl_cannons
+							has_starbase_module = missile_battery
+							has_starbase_module = tec_starbase_m_xxl_missiles
+							has_starbase_module = hangar_bay
+							has_starbase_module = tec_starbase_m_xxl_hangars
+
+							has_starbase_module = tec_starbase_m_physics
+							has_starbase_module = tec_starbase_m_engineering
+
+							has_starbase_module = tec_starbase_m_generator
+							has_starbase_module = tec_starbase_m_mining
+							has_starbase_module = tec_starbase_m_food
+						}
+					}
+				}
+			}
+		}
+	}
+
+	show_in_tech = "tech_tec_starbase_society"
+
+	resources = {
+		category = station_researchers
+		cost = {
+			alloys = 100
+		}
+
+		upkeep = {
+			trigger = {
+				exists = owner
+				owner = {
+					tec_waives_starbase_module_upkeep = no
+				}
+			}
+			energy = 2
+		}
+
+		produces = {
+			society_research = 4
+		}
+
+		produces = {
+			trigger = {
+				has_starbase_building = tec_starbase_b_research
+			}
+			society_research = 2
+		}
+
+		produces = {
+			trigger = {
+				exists = owner
+				owner = {
+					is_galactic_community_member = yes
+				}
+				OR = {
+					is_active_resolution = "resolution_galacticstudies_astral_studies_network"
+					is_active_resolution = "resolution_galacticstudies_advanced_xenostudies"
+					is_active_resolution = "resolution_galacticstudies_ethical_guideline_refactoring"
+					is_active_resolution = "resolution_galacticstudies_extradimensional_experimentation"
+				}
+			}
+			society_research = 2
+		}
+
+		produces = {
+			trigger = {
+				has_starbase_building = curator_think_tank
+			}
+			society_research = 1
+		}
+
+		produces = {
+			trigger = {
+				solar_system = {
+					any_system_planet = {
+						exists = owner
+						owner = {
+							is_primitive = yes
+						}
+					}
+				}
+			}
+			society_research = 4
+		}
+
+		produces = {
+			trigger = {
+				exists = owner
+				owner = {
+					has_ascension_perk = ap_grasp_the_void
+				}
+			}
+			society_research = 2
+		}
+		
+		produces = {
+			trigger = {
+				exists = owner
+				owner = {
+					tec_increases_starbase_module_production = yes
+				}
+			}
+			society_research = 2
+		}
+
+		# expanded starbases
+
+		produces = {
+			trigger = {
+				has_starbase_building = dathnak_embassy
+			}
+			society_research = 2
+		}
+	}
+
+	triggered_station_modifier = {
+		potential = {
+			exists = owner
+			owner = {
+				NOT = {
+					has_ascension_perk = ap_grasp_the_void
+				}
+			}
+		}
+		ship_hull_mult = -0.1
+	}
+
+	triggered_station_modifier = {
+		potential = {
+			exists = owner
+			owner = {
+				has_ascension_perk = ap_grasp_the_void
+			}
+		}
+		ship_hull_mult = 0.1
+		ship_armor_mult = 0.10
+	}
+
+	ai_build_at_chokepoint = no
+	ai_weight = {	# no... useful for ais
+		weight = 100
+	}
+}
+
+tec_starbase_m_engineering = {
+	icon = "GFX_tec_starbase_m_engineering"
+	section = "REFINERY_STARBASE_SECTION"
+	construction_days = 180
+	initial = yes
+
+	potential = {
+		exists = owner
+		owner = {
+			has_technology = "tech_tec_starbase_engineering"
+		}
+		is_orbital_ring = no
+	}
+
+	possible = {
+		hidden_trigger = {	# AI specializes production
+			exists = owner
+			OR = {
+				owner = {
+					is_ai = no
+				}
+				AND = {
+					owner = {	# Only ais
+						is_ai = yes
+					}
+					OR = {
+						solar_system = {	# Only on good systems
+							any_system_planet = {
+								is_planet_class = pc_neutron_star
+							}
+						}
+						NOR = {	# Avoid the modules interfering with other starbase specs
+							has_starbase_module = anchorage
+							has_starbase_module = shipyard
+							has_starbase_module = gun_battery
+							has_starbase_module = tec_starbase_m_xxl_cannons
+							has_starbase_module = missile_battery
+							has_starbase_module = tec_starbase_m_xxl_missiles
+							has_starbase_module = hangar_bay
+							has_starbase_module = tec_starbase_m_xxl_hangars
+
+							has_starbase_module = tec_starbase_m_physics
+							has_starbase_module = tec_starbase_m_society
+
+							has_starbase_module = tec_starbase_m_generator
+							has_starbase_module = tec_starbase_m_mining
+							has_starbase_module = tec_starbase_m_food
+						}
+					}
+				}
+			}
+		}
+	}
+
+	show_in_tech = "tech_tec_starbase_engineering"
+
+	resources = {
+		category = station_researchers
+		cost = {
+			alloys = 100
+		}
+
+		upkeep = {
+			trigger = {
+				exists = owner
+				owner = {
+					tec_waives_starbase_module_upkeep = no
+				}
+			}
+			energy = 2
+		}
+
+		produces = {
+			engineering_research = 4
+		}
+
+		produces = {
+			trigger = {
+				has_starbase_building = tec_starbase_b_research
+			}
+			engineering_research = 2
+		}
+
+		produces = {
+			trigger = {
+				exists = owner
+				owner = {
+					is_galactic_community_member = yes
+				}
+				OR = {
+					is_active_resolution = "resolution_galacticstudies_astral_studies_network"
+					is_active_resolution = "resolution_galacticstudies_advanced_xenostudies"
+					is_active_resolution = "resolution_galacticstudies_ethical_guideline_refactoring"
+					is_active_resolution = "resolution_galacticstudies_extradimensional_experimentation"
+				}
+			}
+			engineering_research = 2
+		}
+		
+
+		produces = {
+			trigger = {
+				has_starbase_building = curator_think_tank
+			}
+			engineering_research = 1
+		}
+
+		produces = {
+			trigger = {
+				exists = owner
+				owner = {
+					has_ascension_perk = ap_grasp_the_void
+				}
+			}
+			engineering_research = 2
+		}
+
+		produces = {
+			trigger = {
+				solar_system = {
+					any_system_planet = {
+						is_planet_class = pc_neutron_star
+					}
+				}
+			}
+			engineering_research = 2
+		}
+
+		produces = {
+			trigger = {
+				exists = owner
+				owner = {
+					tec_increases_starbase_module_production = yes
+				}
+			}
+			engineering_research = 2
+		}
+
+		produces = {
+			trigger = {
+				has_starbase_building = pulsar_hole_observatory
+			}
+			engineering_research = 2
+		}
+	}
+
+	triggered_station_modifier = {
+		potential = {
+			exists = owner
+			owner = {
+				NOT = {
+					has_ascension_perk = ap_grasp_the_void
+				}
+			}
+		}
+		ship_hull_mult = -0.1
+	}
+
+	triggered_station_modifier = {
+		potential = {
+			exists = owner
+			owner = {
+				has_ascension_perk = ap_grasp_the_void
+			}
+		}
+		ship_hull_mult = 0.1
+		ship_armor_mult = 0.10
+	}
+
+	ai_build_at_chokepoint = no
+	ai_weight = {
+		weight = 101
+		modifier = {
+			factor = 2
+			solar_system = {
+				any_system_planet = {
+					is_planet_class = pc_neutron_star
 				}
 			}
 		}

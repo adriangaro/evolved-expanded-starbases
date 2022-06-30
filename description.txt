@@ -6,6 +6,7 @@
 [*] Increased maximum starbase building slots to accomodate both increase from Expanded Starbases Bastions and Stellaris Evolved civics and traditions which give more starbase building slots.
 [*] Enabled the Stellaris Evolved XXL weapon defensive starbase module (starbase unique), requires Eternal Vigilance ascension perk.
 [*] Fallen empires will use the Stellaris Evolved modules on their starbases, making them quite powerful.
+[*] Disabled/combined effects of overlapping buildings and modules between Stellaris Evolved and Starbases Expanded, namely Big Gun Batteries (and the bigger sized) and research producing modules/buildings (pulsar/black hole/protostar observatories boost Evolved research modules).
 [/list]
 
 [h1]Motivation[/h1]
@@ -19,5 +20,5 @@ Stellaris Evolved has some internal support for Expanded Starbases, however ther
 [*] UI Overhaul (probably is required)
 [/list]
 
-[h1]Small Warning[h1]
+[h1]Small Warning[/h1]
 As Expanded Starbases makes starbases and the defensive modules more powerful, this change is applied to those from Stellaris Evolved, making them quite the threat.
