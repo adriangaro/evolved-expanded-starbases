@@ -20,5 +20,12 @@ Stellaris Evolved has some internal support for Expanded Starbases, however ther
 [*] UI Overhaul (probably is required)
 [/list]
 
+[h1]Contacts And Links[/h1]
+[list]
+[*] Discord: MrRoAdd#4232
+[*] Github: https://github.com/adriangaro/evolved-expanded-starbases
+[*] Contributions, bug reports and fixes are appreciated!
+[/list]
+
 [h1]Small Warning[/h1]
 As Expanded Starbases makes starbases and the defensive modules more powerful, this change is applied to those from Stellaris Evolved, making them quite the threat.

@@ -617,18 +617,18 @@ tec_starbase_m_xxl_hypergun = {
 				is_country_type = fallen_empire # allow em on fallen empires
 				is_country_type = awakened_fallen_empire
 			}
+			OR = {
+				has_technology = tech_energy_lance_1
+				has_technology = tech_arc_emitter_1 
+				has_technology = tech_mass_accelerator_1 
+			}
 		}
-	
 		is_orbital_ring = no
 	}
 
 	possible = {
 		NOR = {
 			has_starbase_module = tec_starbase_m_xxl_hypergun
-			starbase_buildable_is_in_queue_before = {
-				first = tec_starbase_m_xxl_hypergun
-				second = tec_starbase_m_xxl_hypergun
-			}
 		}
 	}
 	
@@ -640,7 +640,7 @@ tec_starbase_m_xxl_hypergun = {
 		}
 
 		upkeep = {
-			energy = 5
+			energy = 10
 		}
 	}
 
